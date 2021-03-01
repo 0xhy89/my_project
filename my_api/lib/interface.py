@@ -5,6 +5,7 @@
 # @Software: PyCharm
 from flask import Flask, json, request, session, redirect, url_for, render_template, make_response
 from lib.tools import my_db
+from data.result import result
 
 server = Flask(__name__)
 
@@ -36,7 +37,8 @@ def register():
 
 @server.route('/index', methods=['GET'])
 def index():
-    res = {'msg': '这是一个接口', 'msg_code': 0}
+    # res = {'msg': '这是一个接口', 'msg_code': 0}
+    res = result
     return json.dumps(res, ensure_ascii=False)
 
 
