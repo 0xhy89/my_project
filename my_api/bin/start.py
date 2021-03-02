@@ -3,6 +3,10 @@
 # @Author  : XU
 # @File    : start.py
 # @Software: PyCharm
+import os
+import sys
+sys.path.append(os.path.abspath(__file__).split("my_api")[0])
+
 from my_api.config import setting
 from my_api.lib.interface import server
 

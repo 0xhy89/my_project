@@ -3,6 +3,9 @@
 # @Author  : XU
 # @File    : tools.py
 # @Software: PyCharm
+import os
+import sys
+sys.path.append(os.path.abspath(__file__).split("my_api")[0])
 import pymysql
 from my_api.config.setting import MYSQL_INFO
 

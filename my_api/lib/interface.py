@@ -3,6 +3,9 @@
 # @Author  : XU
 # @File    : interface.py
 # @Software: PyCharm
+import os
+import sys
+sys.path.append(os.path.abspath(__file__).split("my_api")[0])
 from flask import Flask, json, request, session, redirect, url_for, render_template, make_response
 from my_api.lib.tools import my_db
 from my_api.data.result import result
