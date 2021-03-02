@@ -3,8 +3,8 @@
 # @Author  : XU
 # @File    : start.py
 # @Software: PyCharm
-from config import setting
-from lib.interface import server
+from my_api.config import setting
+from my_api.lib.interface import server
 
 
 server.secret_key = setting.SECRET_KEY

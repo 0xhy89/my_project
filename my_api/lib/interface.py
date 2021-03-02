@@ -4,8 +4,8 @@
 # @File    : interface.py
 # @Software: PyCharm
 from flask import Flask, json, request, session, redirect, url_for, render_template, make_response
-from lib.tools import my_db
-from data.result import result
+from my_api.lib.tools import my_db
+from my_api.data.result import result
 
 server = Flask(__name__)
 

@@ -4,7 +4,7 @@
 # @File    : tools.py
 # @Software: PyCharm
 import pymysql
-from config.setting import MYSQL_INFO
+from my_api.config.setting import MYSQL_INFO
 
 
 def my_db(sql):
