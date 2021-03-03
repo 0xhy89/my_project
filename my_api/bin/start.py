@@ -13,4 +13,4 @@ from my_api.lib.interface import server
 
 server.secret_key = setting.SECRET_KEY
 if __name__ == '__main__':
-    server.run(host=setting.SERVER_HOST, port=setting.SERVER_PORT, debug=True)
+    server.run(host=setting.SERVER_HOST, port=setting.SERVER_PORT, debug=False)

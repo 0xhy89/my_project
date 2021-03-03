@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2021-02-21 22:44
 # @Author  : XU
-# @File    : interface.py
+# @File    : run.py
 # @Software: PyCharm
 import os
 import sys

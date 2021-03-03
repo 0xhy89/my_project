@@ -23,3 +23,5 @@ sqlparse==0.4.1
 urllib3==1.26.3
 Werkzeug==1.0.1
 xlrd==1.2.0
+pytest==6.1.2
+allure_python_commons==2.8.22
