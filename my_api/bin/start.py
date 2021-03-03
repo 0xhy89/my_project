@@ -8,9 +8,10 @@ import sys
 sys.path.append(os.path.abspath(__file__).split("my_api")[0])
 
 from my_api.config import setting
-from my_api.lib.interface import server
+from my_api.lib.interface import my_app
+from flup.server.fcgi import WSGIServer
 
-
-server.secret_key = setting.SECRET_KEY
+my_app.secret_key = setting.SECRET_KEY
 if __name__ == '__main__':
-    server.run(host=setting.SERVER_HOST, port=setting.SERVER_PORT, debug=False)
+    WSGIServer(my_app, bindAddress=(setting.SERVER_HOST, setting.SERVER_PORT)).run()
+

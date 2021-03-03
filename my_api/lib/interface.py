@@ -10,15 +10,15 @@ from flask import Flask, json, request, session, redirect, url_for, render_templ
 from my_api.lib.tools import my_db
 from my_api.data.result import result
 
-server = Flask(__name__)
+my_app = Flask(__name__)
 
 
-@server.route('/')
+@my_app.route('/')
 def home():
     return render_template('home.html')
 
 
-@server.route('/register', methods=['POST'])
+@my_app.route('/register', methods=['POST'])
 def register():
     username = request.values.get('username')
     password = request.values.get('password')
@@ -38,20 +38,20 @@ def register():
         return json.dumps(res, ensure_ascii=False)
 
 
-@server.route('/index', methods=['GET'])
+@my_app.route('/index', methods=['GET'])
 def index():
     # res = {'msg': '这是一个接口', 'msg_code': 0}
     res = result
     return json.dumps(res, ensure_ascii=False)
 
 
-@server.route('/hello')
-@server.route('/hello/<name>')
+@my_app.route('/hello')
+@my_app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', name=name)
 
 
-@server.route('/login', methods=['POST', 'GET'])
+@my_app.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'POST':
         if request.form.get('user') == 'admin':
@@ -68,7 +68,7 @@ def login():
         return response
 
 
-@server.route('/logout')
+@my_app.route('/logout')
 def logout():
     session.pop('user', None)
     return redirect(url_for('login'))
