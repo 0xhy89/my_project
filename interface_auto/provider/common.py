@@ -25,3 +25,7 @@ def get_response(url, headers):
     content = r.content.decode(encoding='utf8')
     result = json.loads(content)
     return result
+
+
+def analysis_report():
+    pass

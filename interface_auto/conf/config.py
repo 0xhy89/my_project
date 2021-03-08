@@ -5,8 +5,6 @@
 # @Software: PyCharm
 import os
 
-url = "https://api9.tianyancha.com/services/v3/hotSearch/wxHotWord"
-
 headers = {
     "Authorization": "0###oo34J0ZgbSD7ufsu_CV7Cl1yyT4A###1543998038367###49bf6ec42afb289fbeed4933518c1325",
     "version": "TYC-XCX-WX",

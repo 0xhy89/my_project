@@ -6,6 +6,7 @@
 import allure
 import pytest
 from interface_auto.provider.common import get_response
+from interface_auto.data.api import url
 
 
 @allure.feature("测试类")
@@ -15,7 +16,7 @@ class Test:
     @allure.title("测试用例")
     def test_01(self):
         with allure.step("请求接口"):
-            result = get_response(url=self.url, headers=self.headers)
+            result = get_response(url=url["hot_word"], headers=self.headers)
         assert result['state'] == 'ok'
 
 
