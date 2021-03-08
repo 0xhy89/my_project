@@ -4,3 +4,5 @@ demo
 
 # Pyre type checker
 *.pyc
+interface_auto/report/
+interface_auto/.pytest_cache/
