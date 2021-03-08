@@ -1,5 +1,6 @@
 # Environments
 env
 demo
-*/*.pyc
-*/__pycache__/*
+
+# Pyre type checker
+*.pyc
