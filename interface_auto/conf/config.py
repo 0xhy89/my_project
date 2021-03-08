@@ -5,6 +5,9 @@
 # @Software: PyCharm
 import os
 
+mobile = "15120025369"
+sign_6 = "54994d825e25d1a2a0b92504f9a25443"
+
 headers = {
     "Authorization": "0###oo34J0ZgbSD7ufsu_CV7Cl1yyT4A###1543998038367###49bf6ec42afb289fbeed4933518c1325",
     "version": "TYC-XCX-WX",

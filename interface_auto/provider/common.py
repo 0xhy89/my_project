@@ -7,6 +7,8 @@ import os
 import json
 import requests
 from interface_auto.conf.config import TESTCASE_DIR
+from interface_auto.conf.config import headers, mobile
+from interface_auto.data.api import url, api9
 
 
 def get_testcast():
@@ -20,6 +22,18 @@ def get_testcast():
     return cases_list
 
 
+def analysis_report():
+    pass
+
+
+def login():
+    sms_code_result = get_response(url=url["sms_code"], headers=headers)
+    sms_code = sms_code_result["data"]
+    print(f"验证码是：{sms_code}")
+    login_result = get_response(url=url["login"].format(api9, sms_code, mobile), headers=headers)
+    print(login_result)
+
+
 def get_response(url, headers):
     r = requests.get(url=url, headers=headers)
     content = r.content.decode(encoding='utf8')
@@ -27,5 +41,8 @@ def get_response(url, headers):
     return result
 
 
-def analysis_report():
-    pass
+def check_data(result):
+    for i in range(len(result["data"])):
+        data = result["data"][i]
+        for key in data.keys():
+            print(key)

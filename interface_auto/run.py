@@ -15,7 +15,7 @@ allure_dir = f"{REPORT_DIR}/allure/{now}"
 if not os.path.exists(allure_dir):
     os.makedirs(allure_dir)
 
-# case = "/Users/xu/Documents/workspace/my_project/demo/interface_auto/testcase/test_01.py"
+# case = "/Users/xu/Documents/workspace/my_project/demo/interface_auto/testcase/test_index.py"
 
 
 if __name__ == '__main__':
