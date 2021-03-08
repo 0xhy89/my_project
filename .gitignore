@@ -6,3 +6,5 @@ demo
 *.pyc
 interface_auto/report/
 interface_auto/.pytest_cache/
+
+.idea/
