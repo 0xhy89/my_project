@@ -19,6 +19,11 @@ def index():
     return jsonify(res)
 
 
+@my_app.route('/sspai', methods=['POST'])
+def sspai():
+    return request.data.decode('utf-8')
+
+
 # @my_app.route('/register', methods=['POST'])
 # def register():
 #     username = request.values.get('username')
